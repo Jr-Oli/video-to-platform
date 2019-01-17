@@ -1,0 +1,9 @@
+Platform Controller
+XPOS	Xaxis control	3	SLIDER	X Axis	0	1.0	0.0
+YPOS	Yaxis control	3	SLIDER	Y Axis	0	1.0	0.0
+ROLLPOS	roll control	3	SLIDER	Z Axis	0	1.0	0.0
+PITCHPOS	pitch control	3	SLIDER	Z Rotation	0	1.0	0.0
+ZPLUS	z axis control	3	SLIDER	Y Rotation	0	1.0	0.0
+ZMINUS	z axis control	3	SLIDER	X Rotation	0	1.0	0.0
+CCW	Counter Clock Wise	1	BUTTON	Button 4	0	0.0	0.0
+CW	Clockwise	1	BUTTON	Button 5	0	0.0	0.0
