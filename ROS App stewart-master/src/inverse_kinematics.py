@@ -26,9 +26,9 @@ def twist_callback(twist_msg): #unsure if the following sets speeds, coordinates
     x = twist_msg.linear.x #x axis (forwards or backwards)
     y = twist_msg.linear.y #y axis(left or right)
     z = twist_msg.linear.z #z axis(up or down)
-    roll = twist_msg.angular.x #rotation along x axis
-    pitch = twist_msg.angular.y #rotation along y axis
-    yaw = twist_msg.angular.z #rotation along z axis 
+    roll = twist_msg.angular.x #rotation along x axis (roll)
+    pitch = twist_msg.angular.y #rotation along y axis (pitch)
+    yaw = twist_msg.angular.z #rotation along z axis
     #note function np.dot(a,b) is for dot product between arrays a and b
     for i in range(n_pistons) 
         l = (np.array([x, y, z + h]) + 
