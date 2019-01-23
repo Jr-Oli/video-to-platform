@@ -29,21 +29,22 @@ def twist_callback(twist_msg): #unsure if the following sets speeds, coordinates
     roll = twist_msg.angular.x #rotation along x axis
     pitch = twist_msg.angular.y #rotation along y axis
     yaw = twist_msg.angular.z #rotation along z axis 
-    #note np.dot(a,b) is for dot product between elements in arrays a and b
-    for i in range(n_pistons)
+    #note function np.dot(a,b) is for dot product between arrays a and b
+    for i in range(n_pistons) 
         l = (np.array([x, y, z + h]) + 
              np.dot(rotation_matrix(roll, pitch, yaw), p[i]) -
              b[i])
+        #l = np.array([x, y, z + h]) + np.dot(rotation_matrix(roll, pitch, yaw), p[i]) - b[i] #original code on a single line
         piston_lengths.data[i] = np.sqrt(l[0]**2 + l[1]**2 + l[2]**2)-h
 
     piston_pub.publish(piston_lengths)
 
-    
 def rotation_matrix(rho, theta, psi):
     return np.array([[cos(psi)*cos(theta), -sin(psi)*cos(rho)+cos(psi)*sin(theta)*sin(rho), sin(psi)*sin(rho)+cos(psi)*sin(theta)*cos(rho)],
                      [sin(psi)*cos(theta), cos(psi)*cos(rho)+sin(psi)*sin(theta)*sin(rho), -cos(psi)*sin(rho)+sin(psi)*sin(theta)*cos(rho)],
                      [-sin(theta), cos(theta)*sin(rho), cos(theta)*cos(psi)]])
-
+  
+#register client node with the master under the specified name 'ik'
 rospy.init_node('ik')
 #register twist_sub as a subscriber to the topic '/stewart/platform_twist' where the messages are of type Twist, 
 #and when new messages are received, twist_callback is invoked with the message as the first argument
