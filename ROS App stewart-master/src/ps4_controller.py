@@ -1,8 +1,13 @@
 #!/usr/bin/env python
-from math import pi #3.1415
-import rospy        #Python client library for ROS
-from sensor_msgs.msg import Joy # allows for reporting the state of a joysticks axes and buttons.
-from geometry_msgs.msg import Twist # allows for expressing velocity in free space broken into its linear and angular parts
+
+#get mathematical pi 3.1415
+from math import pi 
+#Python client library for ROS
+import rospy        
+#allows for reporting the state of a joysticks axes and buttons.
+from sensor_msgs.msg import Joy 
+#allows for expressing velocity with linear->movement along x,y, and z axes and angular->rotations around x,y, and z axes
+from geometry_msgs.msg import Twist 
 
 platform_twist = Twist()
 
