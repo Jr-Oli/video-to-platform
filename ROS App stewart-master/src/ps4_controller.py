@@ -40,7 +40,7 @@ def joy_callback(msg):
 #register client node with the master under the specified name 'ps4_controller'
 rospy.init_node('ps4_controller') 
 
-#register '/joy' as a subscriber to the topic '/joy' where the messages are of type Joy, 
+#register joy_sub as a subscriber to the topic '/joy' where the messages are of type Joy, 
 #and when new messages are received, joy_callback is invoked with the message as the first argument
 joy_sub = rospy.Subscriber('/joy', Joy, joy_callback) 
 
