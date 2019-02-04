@@ -1,0 +1,1 @@
+py "C:\Users\Joes Laptop\Desktop\video-to-platform\Movement Detection\Object Tracking\color_detect.py" -f RGB -w -p
