@@ -1,0 +1,665 @@
+This file contains the Cx, Cy, and Cz positions of the cameras found in the CAHV files 353-517
+**Note** multiple sets of CAHV files were tracked in voodoo, but at different times.
+This means the xyz coordinates do not seemlessly relate to each other between all sets.
+Look out for large inconsistent jumps in coordinates.
+
+frame353.cam : 
+;	Cx	Cy	Cz	[mm]
+	1.91983	4.01317	17.15873
+
+frame354.cam : 
+;	Cx	Cy	Cz	[mm]
+	2.38300	3.86585	17.15258
+
+frame355.cam : 
+;	Cx	Cy	Cz	[mm]
+	3.00586	3.73479	17.16694
+
+frame356.cam : 
+;	Cx	Cy	Cz	[mm]
+	3.72094	3.59058	17.19292
+
+frame357.cam : 
+;	Cx	Cy	Cz	[mm]
+	4.52352	3.59157	17.20443
+
+frame358.cam : 
+;	Cx	Cy	Cz	[mm]
+	5.42982	3.68212	17.20203
+
+frame359.cam : 
+;	Cx	Cy	Cz	[mm]
+	6.48715	3.83176	17.19092
+
+frame360.cam : 
+;	Cx	Cy	Cz	[mm]
+	7.72203	3.95462	17.16239
+
+frame361.cam : 
+;	Cx	Cy	Cz	[mm]
+	8.99439	4.10457	17.10962
+
+frame362.cam : 
+;	Cx	Cy	Cz	[mm]
+	10.21700	4.48075	17.05179
+
+frame363.cam : 
+;	Cx	Cy	Cz	[mm]
+	11.48827	4.84008	16.98751
+
+frame364.cam : 
+;	Cx	Cy	Cz	[mm]
+	12.79996	5.13376	16.90763
+
+frame365.cam : 
+;	Cx	Cy	Cz	[mm]
+	14.03372	5.26953	16.81381
+
+frame366.cam : 
+;	Cx	Cy	Cz	[mm]
+	15.23378	5.19165	16.70916
+
+frame367.cam : 
+;	Cx	Cy	Cz	[mm]
+	-0.00886	-0.00253	-0.03453
+
+frame368.cam : 
+;	Cx	Cy	Cz	[mm]
+	0.02335	-0.03130	-0.60358
+
+frame369.cam : 
+;	Cx	Cy	Cz	[mm]
+	0.05293	-0.06041	-1.16752
+
+frame370.cam : 
+;	Cx	Cy	Cz	[mm]
+	-0.08649	0.03857	0.90609
+
+frame371.cam : 
+;	Cx	Cy	Cz	[mm]
+	-0.10536	0.05625	1.20574
+
+frame372.cam : 
+;	Cx	Cy	Cz	[mm]
+	-0.13020	0.08240	1.50243
+
+frame373.cam : 
+;	Cx	Cy	Cz	[mm]
+	-0.16235	0.10712	1.78686
+
+frame374.cam : 
+;	Cx	Cy	Cz	[mm]
+	-0.18759	0.13287	2.07905
+
+frame375.cam : 
+;	Cx	Cy	Cz	[mm]
+	-0.20722	0.15996	2.37589
+
+frame376.cam : 
+;	Cx	Cy	Cz	[mm]
+	-0.22473	0.19636	2.66381
+
+frame377.cam : 
+;	Cx	Cy	Cz	[mm]
+	-0.23557	0.22125	2.94417
+
+frame378.cam : 
+;	Cx	Cy	Cz	[mm]
+	-0.24425	0.24351	3.22935
+
+frame379.cam : 
+;	Cx	Cy	Cz	[mm]
+	-0.24936	0.26494	3.51471
+
+frame380.cam : 
+;	Cx	Cy	Cz	[mm]
+	-1.47565	2.39586	8.57350
+
+frame381.cam : 
+;	Cx	Cy	Cz	[mm]
+	-1.28865	2.43278	8.66330
+
+frame382.cam : 
+;	Cx	Cy	Cz	[mm]
+	-1.07541	2.45626	8.75994
+
+frame383.cam : 
+;	Cx	Cy	Cz	[mm]
+	-0.87409	2.48435	8.84416
+
+frame384.cam : 
+;	Cx	Cy	Cz	[mm]
+	-0.67272	2.52187	8.92785
+
+frame385.cam : 
+;	Cx	Cy	Cz	[mm]
+	-0.47711	2.54743	9.01671
+
+frame386.cam : 
+;	Cx	Cy	Cz	[mm]
+	-0.30836	2.62587	9.10639
+
+frame387.cam : 
+;	Cx	Cy	Cz	[mm]
+	-0.07288	2.64828	9.19189
+
+frame388.cam : 
+;	Cx	Cy	Cz	[mm]
+	0.15462	2.69769	9.28093
+
+frame389.cam : 
+;	Cx	Cy	Cz	[mm]
+	0.41606	2.74277	9.37022
+
+frame390.cam : 
+;	Cx	Cy	Cz	[mm]
+	0.66548	2.80800	9.46470
+
+frame391.cam : 
+;	Cx	Cy	Cz	[mm]
+	0.91256	2.84416	9.55649
+
+frame392.cam : 
+;	Cx	Cy	Cz	[mm]
+	1.15659	2.87812	9.65163
+
+frame393.cam : 
+;	Cx	Cy	Cz	[mm]
+	1.41877	2.92234	9.74093
+
+frame394.cam : 
+;	Cx	Cy	Cz	[mm]
+	1.66271	2.96745	9.82503
+
+frame395.cam : 
+;	Cx	Cy	Cz	[mm]
+	1.92195	3.01950	9.89965
+
+frame396.cam : 
+;	Cx	Cy	Cz	[mm]
+	2.24511	3.07852	9.98203
+
+frame397.cam : 
+;	Cx	Cy	Cz	[mm]
+	2.56806	3.13864	10.10468
+
+frame398.cam : 
+;	Cx	Cy	Cz	[mm]
+	2.84737	3.16939	10.19469
+
+frame399.cam : 
+;	Cx	Cy	Cz	[mm]
+	3.11298	3.20601	10.26935
+
+frame400.cam : 
+;	Cx	Cy	Cz	[mm]
+	3.39760	3.26028	10.32509
+
+frame401.cam : 
+;	Cx	Cy	Cz	[mm]
+	3.66759	3.29542	10.37514
+
+frame402.cam : 
+;	Cx	Cy	Cz	[mm]
+	3.96627	3.33751	10.41616
+
+frame403.cam : 
+;	Cx	Cy	Cz	[mm]
+	4.26461	3.34957	10.46628
+
+frame404.cam : 
+;	Cx	Cy	Cz	[mm]
+	4.65265	3.33435	10.53103
+
+frame405.cam : 
+;	Cx	Cy	Cz	[mm]
+	4.97803	3.34353	10.61220
+
+frame406.cam : 
+;	Cx	Cy	Cz	[mm]
+	5.32726	3.34103	10.67840
+
+frame407.cam : 
+;	Cx	Cy	Cz	[mm]
+	5.69663	3.31438	10.73866
+
+frame408.cam : 
+;	Cx	Cy	Cz	[mm]
+	6.08908	3.27369	10.78604
+
+frame409.cam : 
+;	Cx	Cy	Cz	[mm]
+	6.52038	3.32624	10.80358
+
+frame410.cam : 
+;	Cx	Cy	Cz	[mm]
+	6.95101	3.41831	10.83548
+
+frame411.cam : 
+;	Cx	Cy	Cz	[mm]
+	7.39657	3.58791	10.83245
+
+frame412.cam : 
+;	Cx	Cy	Cz	[mm]
+	7.82677	3.80584	10.85255
+
+frame413.cam : 
+;	Cx	Cy	Cz	[mm]
+	8.24513	3.83940	10.88781
+
+frame414.cam : 
+;	Cx	Cy	Cz	[mm]
+	8.58171	3.77818	10.95439
+
+frame415.cam : 
+;	Cx	Cy	Cz	[mm]
+	8.90906	3.68486	11.02261
+
+frame416.cam : 
+;	Cx	Cy	Cz	[mm]
+	9.27974	3.62580	11.07737
+
+frame417.cam : 
+;	Cx	Cy	Cz	[mm]
+	9.62761	3.44715	11.14354
+
+frame418.cam : 
+;	Cx	Cy	Cz	[mm]
+	10.01395	3.31002	11.18877
+
+frame419.cam : 
+;	Cx	Cy	Cz	[mm]
+	10.41118	3.16517	11.22716
+
+frame420.cam : 
+;	Cx	Cy	Cz	[mm]
+	10.78773	2.90902	11.26790
+
+frame421.cam : 
+;	Cx	Cy	Cz	[mm]
+	11.10518	2.65688	11.37142
+
+frame422.cam : 
+;	Cx	Cy	Cz	[mm]
+	11.31691	2.39335	11.50243
+
+frame423.cam : 
+;	Cx	Cy	Cz	[mm]
+	-157.37156	29.28808	-40.11652
+
+frame424.cam : 
+;	Cx	Cy	Cz	[mm]
+	-157.12788	29.35055	-39.99978
+
+frame425.cam : 
+;	Cx	Cy	Cz	[mm]
+	-156.90093	29.41937	-39.91040
+
+frame426.cam : 
+;	Cx	Cy	Cz	[mm]
+	-156.66455	29.46918	-39.81955
+
+frame427.cam : 
+;	Cx	Cy	Cz	[mm]
+	-156.38643	29.53436	-39.75614
+
+frame428.cam : 
+;	Cx	Cy	Cz	[mm]
+	-156.12086	29.58082	-39.69321
+
+frame429.cam : 
+;	Cx	Cy	Cz	[mm]
+	-155.84600	29.64756	-39.64660
+
+frame430.cam : 
+;	Cx	Cy	Cz	[mm]
+	-155.56000	29.75090	-39.51622
+
+frame431.cam : 
+;	Cx	Cy	Cz	[mm]
+	-155.27446	29.85507	-39.43435
+
+frame432.cam : 
+;	Cx	Cy	Cz	[mm]
+	-155.00806	29.90344	-39.40107
+
+frame433.cam : 
+;	Cx	Cy	Cz	[mm]
+	-154.73670	29.95286	-39.36021
+
+frame434.cam : 
+;	Cx	Cy	Cz	[mm]
+	-154.45135	29.98747	-39.33124
+
+frame435.cam : 
+;	Cx	Cy	Cz	[mm]
+	-154.16072	29.99395	-39.34751
+
+frame436.cam : 
+;	Cx	Cy	Cz	[mm]
+	-153.86676	30.00497	-39.39121
+
+frame437.cam : 
+;	Cx	Cy	Cz	[mm]
+	-153.51609	30.03864	-39.35762
+
+frame438.cam : 
+;	Cx	Cy	Cz	[mm]
+	-153.20937	30.01424	-39.41116
+
+frame439.cam : 
+;	Cx	Cy	Cz	[mm]
+	-152.94913	30.07259	-39.33318
+
+frame440.cam : 
+;	Cx	Cy	Cz	[mm]
+	-152.68602	30.15294	-39.24661
+
+frame441.cam : 
+;	Cx	Cy	Cz	[mm]
+	-152.46367	30.29406	-39.06448
+
+frame442.cam : 
+;	Cx	Cy	Cz	[mm]
+	-152.21411	30.42610	-38.91466
+
+frame443.cam : 
+;	Cx	Cy	Cz	[mm]
+	-151.94827	30.54172	-38.76935
+
+frame444.cam : 
+;	Cx	Cy	Cz	[mm]
+	-151.72810	30.70014	-38.52565
+
+frame445.cam : 
+;	Cx	Cy	Cz	[mm]
+	-151.49385	30.78653	-38.40082
+
+frame446.cam : 
+;	Cx	Cy	Cz	[mm]
+	-151.27914	30.81631	-38.02636
+
+frame447.cam : 
+;	Cx	Cy	Cz	[mm]
+	-150.87726	30.89314	-37.82448
+
+frame448.cam : 
+;	Cx	Cy	Cz	[mm]
+	-150.30167	30.78654	-37.61657
+
+frame449.cam : 
+;	Cx	Cy	Cz	[mm]
+	-149.62871	30.75893	-37.48571
+
+frame450.cam : 
+;	Cx	Cy	Cz	[mm]
+	-148.97197	30.65444	-37.33276
+
+frame451.cam : 
+;	Cx	Cy	Cz	[mm]
+	-148.30941	30.56771	-37.20566
+
+frame452.cam : 
+;	Cx	Cy	Cz	[mm]
+	-147.67033	30.54062	-37.05140
+
+frame453.cam : 
+;	Cx	Cy	Cz	[mm]
+	-146.98367	30.44712	-36.89747
+
+frame454.cam : 
+;	Cx	Cy	Cz	[mm]
+	-146.26861	30.37257	-36.74897
+
+frame455.cam : 
+;	Cx	Cy	Cz	[mm]
+	-145.48813	30.22619	-36.63084
+
+frame456.cam : 
+;	Cx	Cy	Cz	[mm]
+	-144.76461	30.20472	-36.52908
+
+frame457.cam : 
+;	Cx	Cy	Cz	[mm]
+	-144.05108	30.17384	-36.35946
+
+frame458.cam : 
+;	Cx	Cy	Cz	[mm]
+	-143.31951	30.09452	-36.25302
+
+frame459.cam : 
+;	Cx	Cy	Cz	[mm]
+	-142.63485	30.03410	-36.11099
+
+frame460.cam : 
+;	Cx	Cy	Cz	[mm]
+	-142.04243	30.06842	-35.95269
+
+frame461.cam : 
+;	Cx	Cy	Cz	[mm]
+	-141.45198	30.25178	-35.88619
+
+frame462.cam : 
+;	Cx	Cy	Cz	[mm]
+	-140.86273	30.50035	-35.79045
+
+frame463.cam : 
+;	Cx	Cy	Cz	[mm]
+	-140.29763	30.67305	-35.67890
+
+frame464.cam : 
+;	Cx	Cy	Cz	[mm]
+	-139.54782	30.94211	-35.66424
+
+frame465.cam : 
+;	Cx	Cy	Cz	[mm]
+	-138.72688	31.07223	-35.63644
+
+frame466.cam : 
+;	Cx	Cy	Cz	[mm]
+	-137.87075	30.96168	-35.54807
+
+frame467.cam : 
+;	Cx	Cy	Cz	[mm]
+	-137.01449	30.77677	-35.42878
+
+frame468.cam : 
+;	Cx	Cy	Cz	[mm]
+	-136.16052	30.76012	-35.39221
+
+frame469.cam : 
+;	Cx	Cy	Cz	[mm]
+	-135.32724	30.74959	-35.29932
+
+frame470.cam : 
+;	Cx	Cy	Cz	[mm]
+	-134.54278	30.56369	-35.11364
+
+frame471.cam : 
+;	Cx	Cy	Cz	[mm]
+	-133.85468	30.33136	-34.85224
+
+frame472.cam : 
+;	Cx	Cy	Cz	[mm]
+	-133.84235	30.16442	-34.89099
+
+frame473.cam : 
+;	Cx	Cy	Cz	[mm]
+	-133.23143	29.99571	-34.54130
+
+frame474.cam : 
+;	Cx	Cy	Cz	[mm]
+	-132.66491	29.92393	-34.13371
+
+frame475.cam : 
+;	Cx	Cy	Cz	[mm]
+	-132.11827	29.86232	-33.70807
+
+frame476.cam : 
+;	Cx	Cy	Cz	[mm]
+	-131.58889	29.79947	-33.28478
+
+frame477.cam : 
+;	Cx	Cy	Cz	[mm]
+	-131.08392	29.74385	-32.86972
+
+frame478.cam : 
+;	Cx	Cy	Cz	[mm]
+	-130.57609	29.73678	-32.45216
+
+frame479.cam : 
+;	Cx	Cy	Cz	[mm]
+	-130.05941	29.73189	-32.04926
+
+frame480.cam : 
+;	Cx	Cy	Cz	[mm]
+	-129.57923	29.70688	-31.67872
+
+frame481.cam : 
+;	Cx	Cy	Cz	[mm]
+	-129.12387	29.61371	-31.28701
+
+frame482.cam : 
+;	Cx	Cy	Cz	[mm]
+	-128.58952	29.55840	-30.83924
+
+frame483.cam : 
+;	Cx	Cy	Cz	[mm]
+	-128.14742	29.52534	-30.43824
+
+frame484.cam : 
+;	Cx	Cy	Cz	[mm]
+	-127.69885	29.53801	-30.06970
+
+frame485.cam : 
+;	Cx	Cy	Cz	[mm]
+	-127.29774	29.52668	-29.70997
+
+frame486.cam : 
+;	Cx	Cy	Cz	[mm]
+	-126.93073	29.51266	-29.36852
+
+frame487.cam : 
+;	Cx	Cy	Cz	[mm]
+	-126.58927	29.51935	-29.02067
+
+frame488.cam : 
+;	Cx	Cy	Cz	[mm]
+	-126.16860	29.49008	-28.63719
+
+frame489.cam : 
+;	Cx	Cy	Cz	[mm]
+	-125.87488	29.52445	-28.32447
+
+frame490.cam : 
+;	Cx	Cy	Cz	[mm]
+	-125.80076	29.94533	-28.13747
+
+frame491.cam : 
+;	Cx	Cy	Cz	[mm]
+	-127.03838	31.32122	-28.75930
+
+frame492.cam : 
+;	Cx	Cy	Cz	[mm]
+	-126.63691	31.29307	-28.36234
+
+frame493.cam : 
+;	Cx	Cy	Cz	[mm]
+	-125.86018	31.18679	-27.78471
+
+frame494.cam : 
+;	Cx	Cy	Cz	[mm]
+	-126.04929	31.69447	-26.95712
+
+frame495.cam : 
+;	Cx	Cy	Cz	[mm]
+	-126.08663	31.98243	-26.52501
+
+frame496.cam : 
+;	Cx	Cy	Cz	[mm]
+	-126.14858	32.24358	-26.09653
+
+frame497.cam : 
+;	Cx	Cy	Cz	[mm]
+	-126.35819	32.50338	-25.75600
+
+frame498.cam : 
+;	Cx	Cy	Cz	[mm]
+	-126.55725	32.81189	-25.33482
+
+frame499.cam : 
+;	Cx	Cy	Cz	[mm]
+	-126.71742	33.11958	-24.91916
+
+frame500.cam : 
+;	Cx	Cy	Cz	[mm]
+	-126.87374	33.43816	-24.45823
+
+frame501.cam : 
+;	Cx	Cy	Cz	[mm]
+	-127.03403	33.73539	-24.01521
+
+frame502.cam : 
+;	Cx	Cy	Cz	[mm]
+	-127.15895	33.98287	-23.66984
+
+frame503.cam : 
+;	Cx	Cy	Cz	[mm]
+	-127.03450	34.33121	-23.24177
+
+frame504.cam : 
+;	Cx	Cy	Cz	[mm]
+	-127.00528	34.70319	-22.84483
+
+frame505.cam : 
+;	Cx	Cy	Cz	[mm]
+	-126.90261	34.90215	-22.34009
+
+frame506.cam : 
+;	Cx	Cy	Cz	[mm]
+	-126.81031	35.09863	-22.05677
+
+frame507.cam : 
+;	Cx	Cy	Cz	[mm]
+	-126.75360	35.45557	-21.69705
+
+frame508.cam : 
+;	Cx	Cy	Cz	[mm]
+	-126.69574	35.58454	-21.16326
+
+frame509.cam : 
+;	Cx	Cy	Cz	[mm]
+	-126.66730	35.73391	-20.70371
+
+frame510.cam : 
+;	Cx	Cy	Cz	[mm]
+	-126.61140	36.07581	-20.30912
+
+frame511.cam : 
+;	Cx	Cy	Cz	[mm]
+	-126.77844	36.30388	-19.98478
+
+frame512.cam : 
+;	Cx	Cy	Cz	[mm]
+	-126.90952	36.43488	-19.63831
+
+frame513.cam : 
+;	Cx	Cy	Cz	[mm]
+	-127.07325	36.68210	-19.44651
+
+frame514.cam : 
+;	Cx	Cy	Cz	[mm]
+	-127.19445	36.89840	-19.19882
+
+frame515.cam : 
+;	Cx	Cy	Cz	[mm]
+	-127.25528	37.05443	-18.92212
+
+frame516.cam : 
+;	Cx	Cy	Cz	[mm]
+	-127.27255	37.34915	-18.67301
+
+frame517.cam : 
+;	Cx	Cy	Cz	[mm]
+	-127.24970	37.60821	-18.33929
+
