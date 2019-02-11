@@ -1,0 +1,11 @@
+This folder contains all the CAHV files created by Voodoo 1.2.0 after processing multiple image sequences.
+Each file in a set of image sequences have x,y,z coordinates relative to one another. The coordinates in one set
+are not set relative to coordinates in another set.
+
+The Ruby file pulls only the Cx,Cy, and Cv, coordinates from each frame###.cam file and puts them into a new file
+called frameCoords.txt
+
+The pdf is a short tutorial of how I processed the image sequence in Voodoo and then used the Ruby program.
+
+The Excel file contains the coordinates from the frameCoords.txt file after they have been processed so the coordinates transition 
+between sets.
