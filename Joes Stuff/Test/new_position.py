@@ -1,9 +1,6 @@
 import math
 
-#currentX = float('.25')
-#newX = float('-.5')
-
-def find_x(currentX,newX):
+def find_movement(currentX,newX):
     xMovement ='0'
     #determine which direction we need to go for X
     if currentX > newX: #We're going from bigger to smaller
