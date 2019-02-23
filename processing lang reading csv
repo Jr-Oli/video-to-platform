@@ -1,0 +1,58 @@
+import java.io.FileReader;
+import java.io.FileNotFoundException;
+import java.util.*;
+  
+  ArrayList<Integer>[] csvData; //m by 6 array where m is the number of frames in the video
+  int dof = 6; //degrees of freedom which should == number of csv coloumns
+  
+  void setup(){
+    csvData = new ArrayList[dof];
+    for (int i = 0; i <= dof-1; i++) { 
+      csvData[i] = new ArrayList<Integer>(1802);
+    }
+    readData("C:\\Users\\Whoa\\Documents\\sample.csv");
+  }
+
+  void readData(String myFileName){
+    File file = new File(myFileName); //create alocal variable to hold our file
+    BufferedReader br = null;
+    
+    try{
+      br = new BufferedReader(new FileReader(file)); //read the file into br
+      String text = null;
+      
+      while((text = br.readLine())!= null){ //read a line from the file until you reach the end
+        String [] coordinates = splitTokens(text,","); //add each comma seperated value from the current line into an array
+        
+        for (int i = 0; i < dof; i++) { 
+          csvData[i].add(int(coordinates[i])); //add the elements in the coordinates array into the growing array list.
+        }
+      }
+      
+    }catch(FileNotFoundException e){
+      e.printStackTrace();
+    }catch(IOException e){
+      e.printStackTrace();
+    }finally{
+      try {
+        if (br != null){
+          br.close();
+        }
+      } catch (IOException e) {
+        e.printStackTrace();
+      }
+    }
+    
+    for (int i = 0; i <= dof-1; i++){
+      csvData[i].trimToSize();
+    }
+    
+  
+    for (int row = 0; row <= csvData[0].size()-1; row++){
+      for(int col = 0; col <= dof-1; col++){
+        System.out.print(csvData[col].get(row) + " "); 
+      } 
+      System.out.println(); 
+    }
+    
+  }
