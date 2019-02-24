@@ -11,7 +11,7 @@ class MyTCPHandler(socketserver.BaseRequestHandler):
 
     def handle(self):
         # self.request is the TCP socket connected to the client
-        self.data = self.request.recv(1024).strip()
+        self.data = self.request.recv(512).strip()
         print("{} wrote:".format(self.client_address[0]))
         print(self.data.decode('utf_8'))
         
