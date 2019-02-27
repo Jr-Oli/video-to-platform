@@ -4,7 +4,6 @@ from new_position import find_movement
 import socket
 import sys
 import time
-import sys
 
 
 
