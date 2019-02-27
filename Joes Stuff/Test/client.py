@@ -8,7 +8,7 @@ import sys
 
 
 
-#Host/Port
+#Host/Port, change this to the system you want to receive info from.
 HOST, PORT = "localhost", 9999
 
 from_sheet = p.iget_records(file_name='Test_Data1.csv')
