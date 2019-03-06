@@ -1,6 +1,5 @@
 import socket
 import pyexcel as p
-from new_position import find_movement
 from threading import Timer
 import time
 import os.path
@@ -49,6 +48,8 @@ def select_test_range(choice):
         return SELECTEDDATA
     else:
         print("Please input a correct choice.")
+
+#Prompt user for their choice        
 print("---------------------------------------------")
 print("| Welcome to stewart platform simulator.    |")
 print("| Please make one of the following choices: |")
@@ -59,7 +60,20 @@ print("| 3=Max X0                                  |")
 print("| 4=Max Y0                                  |")
 print("| 5=Max Z0                                  |")
 print("---------------------------------------------")
-userinput = input("Make your choice:")
+try:
+    userinput = int(input("Make your choice:"))
+except ValueError:
+    print("Please enter an integer")
+
+#Fill an array with the users choice.
+CHOSENDATA = select_test_range(userinput)
+
+print("Thank you, please standby.")
+time.sleep(2)
+print("Here are your results:")
+for i in range(len(CHOSENDATA)):
+    print(CHOSENDATA[i])
+
 
 
 
@@ -77,9 +91,9 @@ userinput = input("Make your choice:")
 
 
 # Create a socket (SOCK_STREAM means a TCP socket)
-with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
+#with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
     # Connect to server and send DATA
-    sock.connect((HOST, PORT))
+    #sock.connect((HOST, PORT))
 
     #Uncomment for debugging purposes#
     #sock.sendall(bytes("Current platform position: " + str(DATA[0]) + "\n","utf_8"))
