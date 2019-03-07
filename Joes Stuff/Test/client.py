@@ -3,8 +3,6 @@ import pyexcel as p
 from new_position import find_movement
 from threading import Timer
 import time
-import os.path
-import os
 
 print (os.path.abspath(os.curdir))
 
