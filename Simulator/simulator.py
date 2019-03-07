@@ -27,6 +27,7 @@ for coords in FROM_SHEET:
     DATA[COUNTER][5] = round(DATA[COUNTER][5], 2)
     COUNTER += 1
 
+#Fills an array with only data that the user decides.
 def select_test_range(choice):
     if choice == 0:
         SELECTEDDATA = DATA[0:202]
@@ -65,7 +66,7 @@ try:
 except ValueError:
     print("Please enter an integer")
 
-#Fill an array with the users choice.
+#Pass user's choice into the data selector
 CHOSENDATA = select_test_range(userinput)
 
 print("Thank you, please standby.")
@@ -73,24 +74,10 @@ time.sleep(2)
 print("Here are your results:")
 for i in range(len(CHOSENDATA)):
     print(CHOSENDATA[i])
+    time.sleep(.3)
 
 
-
-
-#print("Number of entries: ", COUNTER)
-#print(DATA)
-
-#Not needed if not sending individual movements
-#NEWX = find_movement(DATA[0][0], DATA[1][0])
-#NEWY = find_movement(DATA[0][1], DATA[1][1])
-#NEWZ = find_movement(DATA[0][2], DATA[1][2])
-#NEWX0 = find_movement(DATA[0][3], DATA[1][3])
-#NEWY0 = find_movement(DATA[0][4], DATA[1][4])
-#NEWZ0 = find_movement(DATA[0][5], DATA[1][5])
-
-
-
-# Create a socket (SOCK_STREAM means a TCP socket)
+#Create a socket (SOCK_STREAM means a TCP socket)
 #with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
     # Connect to server and send DATA
     #sock.connect((HOST, PORT))
@@ -107,14 +94,8 @@ for i in range(len(CHOSENDATA)):
 
 
     #for i in range(len(DATA)):
-
-        #Socket
         #sock.sendall(bytes(str(DATA[i]) +"\n", "utf_8"))
         #print(DATA[i])
         #time.sleep(.3)
 
-    #ser.close()
-
-    #for x in DATA[0]:
-        #sock.sendall(bytes(str(x) +"\n", "utf_8"))
 p.free_resources()
