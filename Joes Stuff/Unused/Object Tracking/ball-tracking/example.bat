@@ -1,1 +1,0 @@
-py "C:\Users\Joes Laptop\Desktop\video-to-platform\Movement Detection\Object Tracking\ball-tracking\object_movement.py" -v "C:\Users\Joes Laptop\Desktop\video-to-platform\Movement Detection\Object Tracking\ball-tracking\ball_tracking_example.mp4
