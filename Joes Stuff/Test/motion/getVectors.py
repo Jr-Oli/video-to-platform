@@ -20,6 +20,7 @@ import numpy as np
 import cv2 as cv
 import video
 import math
+import toCSV
 
 
 def draw_flow(img, flow, step=16):
@@ -75,6 +76,7 @@ if __name__ == '__main__':
     show_glitch = False
     cur_glitch = prev.copy()
 
+    toCSV.coorTruncate()
     frameCounter = 0
     
     #Will ensure the program keeps looping until you press escape.
@@ -105,10 +107,12 @@ if __name__ == '__main__':
             vectorCounter += 1
             if length != 0:
                 print('Vector number ' + str(vectorCounter))
-                print('Start coordinates ' + '[' + str(x1) + ',' + str(y1) + ']')
-                print('End coordinates' + '[' + str(_x2) + ',' + str(_y2) + ']')
-                print('Angle: ' + str(angle))
+                print('Start and End coordinates ' + '[' + str(x1) + ',' + str(y1) + '] ' + '[' + str(_x2) + ',' + str(_y2) + ']')
+                print('Angle of the dangle ' + str(angle))
                 print('Difference in pixels: ' + str(length))
+        toCSV.coorWrite(arrows[0])
+                
+                
                 
         #Pressing Escape to get out of the program. Change the value for "waitKey" to give more or less milliseconds between frames.
         ch = cv.waitKey(3000)
