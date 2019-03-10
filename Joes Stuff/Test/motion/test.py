@@ -77,7 +77,6 @@ if __name__ == '__main__':
 
     frameCounter = 0
     
-    
     #Will ensure the program keeps looping until you press escape.
     while True:
         
@@ -95,10 +94,6 @@ if __name__ == '__main__':
         if show_glitch:
             cur_glitch = warp_flow(cur_glitch, flow)
             cv.imshow('glitch', cur_glitch)
-
-              
-        
-        
                 
         arrows.clear()
         finalImg = draw_flow(gray,flow)
@@ -110,7 +105,7 @@ if __name__ == '__main__':
             vectorCounter += 1
             if length != 0:
                 print('Vector number ' + str(vectorCounter))
-                print(' start coordinates ' + '[' + str(x1) + ',' + str(y1) + ']')
+                print('Start coordinates ' + '[' + str(x1) + ',' + str(y1) + ']')
                 print('End coordinates' + '[' + str(_x2) + ',' + str(_y2) + ']')
                 print('Angle: ' + str(angle))
                 print('Difference in pixels: ' + str(length))
