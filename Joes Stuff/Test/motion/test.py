@@ -19,9 +19,12 @@ from __future__ import print_function
 import numpy as np
 import cv2 as cv
 import video
+import math
 
 
 def draw_flow(img, flow, step=16):
+    global arrows
+    
     h, w = img.shape[:2]
     y, x = np.mgrid[step/2:h:step, step/2:w:step].reshape(2,-1).astype(int)
     fx, fy = flow[y,x].T
@@ -30,6 +33,7 @@ def draw_flow(img, flow, step=16):
     vis = cv.cvtColor(img, cv.COLOR_GRAY2BGR)
     cv.polylines(vis, lines, 0, (0, 255, 0))
     for (x1, y1), (_x2, _y2) in lines:
+        arrows.append([x1,y1, _x2, _y2, math.sqrt((_x2-x1)*(_x2-x1) + (_y2-y1)*(_y2-y1)), math.degrees(math.atan2(_x2-x1, _y2-y1)) ])
         cv.circle(vis, (x1, y1), 1, (0, 255, 0), -1)
     return vis
 
@@ -63,6 +67,7 @@ if __name__ == '__main__':
     except IndexError:
         fn = 0
 
+    arrows = []
     cam = video.create_capture(fn)
     ret, prev = cam.read()
     prevgray = cv.cvtColor(prev, cv.COLOR_BGR2GRAY)
@@ -70,7 +75,13 @@ if __name__ == '__main__':
     show_glitch = False
     cur_glitch = prev.copy()
 
+    frameCounter = 0
+    
     while True:
+        
+        frameCounter += 1
+        print('Frame ' + str(frameCounter) + '/n')
+        
         ret, img = cam.read()
         gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
         flow = cv.calcOpticalFlowFarneback(prevgray, gray, None, 0.5, 3, 15, 3, 5, 1.2, 0)
@@ -83,8 +94,29 @@ if __name__ == '__main__':
             cur_glitch = warp_flow(cur_glitch, flow)
             cv.imshow('glitch', cur_glitch)
 
-        ch = cv.waitKey(5)
+        arrows.clear()
+        finalImg = draw_flow(gray,flow)
+        
+        print(arrows[0])
+        
+        arrowCounter = 0
+        
+        '''
+        for [x1, y1, _x2, _y2, length] in arrows : 
+            arrowCounter += 1
+            if length != 0:
+                print('Arrow number ' + str(arrowCounter) + ' start ' + '[' + str(x1) + ',' + str(y1) + ']')
+                print('Arrow number ' + str(arrowCounter) + ' end ' + '[' + str(_x2) + ',' + str(_y2) + ']')
+                print('Angle of the Dangle: ' + str(math.degrees(math.atan2(_x2-x1, _y2-y1))))
+                print('Length ' + str(length))
+        '''
+            
+        
+        ch = cv.waitKey(5000)
         if ch == 27:
+            
+            #print(arrows)
+            #for arrow in arrows: print(arrow[0])
             break
         if ch == ord('1'):
             show_hsv = not show_hsv
@@ -94,4 +126,5 @@ if __name__ == '__main__':
             if show_glitch:
                 cur_glitch = img.copy()
             print('glitch is', ['off', 'on'][show_glitch])
+    #print(arrows[0])
     cv.destroyAllWindows()
