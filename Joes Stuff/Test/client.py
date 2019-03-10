@@ -6,7 +6,7 @@ import time
 
 print (os.path.abspath(os.curdir))
 
-#Host/Port
+#Host/Port, change this to the system you want to receive info from.
 HOST, PORT = "localhost", 9999
 
 #Pull data from excel shet
