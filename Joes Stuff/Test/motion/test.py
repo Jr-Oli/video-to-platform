@@ -77,10 +77,12 @@ if __name__ == '__main__':
 
     frameCounter = 0
     
+    
+    #Will ensure the program keeps looping until you press escape.
     while True:
         
         frameCounter += 1
-        print('Frame ' + str(frameCounter) + '/n')
+        print('Frame ' + str(frameCounter))
         
         ret, img = cam.read()
         gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
@@ -94,29 +96,28 @@ if __name__ == '__main__':
             cur_glitch = warp_flow(cur_glitch, flow)
             cv.imshow('glitch', cur_glitch)
 
+              
+        
+        
+                
         arrows.clear()
         finalImg = draw_flow(gray,flow)
         
-        print(arrows[0])
+        vectorCounter = 0  
         
-        arrowCounter = 0
-        
-        '''
-        for [x1, y1, _x2, _y2, length] in arrows : 
-            arrowCounter += 1
+        #Prints Vector (arrow) information to console, but only ones that show change. Remove if length != 0 to print ALL vectors to console
+        for [x1, y1, _x2, _y2, length, angle ] in arrows : 
+            vectorCounter += 1
             if length != 0:
-                print('Arrow number ' + str(arrowCounter) + ' start ' + '[' + str(x1) + ',' + str(y1) + ']')
-                print('Arrow number ' + str(arrowCounter) + ' end ' + '[' + str(_x2) + ',' + str(_y2) + ']')
-                print('Angle of the Dangle: ' + str(math.degrees(math.atan2(_x2-x1, _y2-y1))))
-                print('Length ' + str(length))
-        '''
-            
-        
-        ch = cv.waitKey(5000)
+                print('Vector number ' + str(vectorCounter))
+                print(' start coordinates ' + '[' + str(x1) + ',' + str(y1) + ']')
+                print('End coordinates' + '[' + str(_x2) + ',' + str(_y2) + ']')
+                print('Angle: ' + str(angle))
+                print('Difference in pixels: ' + str(length))
+                
+        #Pressing Escape to get out of the program. Change the value for "waitKey" to give more or less milliseconds between frames.
+        ch = cv.waitKey(3000)
         if ch == 27:
-            
-            #print(arrows)
-            #for arrow in arrows: print(arrow[0])
             break
         if ch == ord('1'):
             show_hsv = not show_hsv
@@ -126,5 +127,4 @@ if __name__ == '__main__':
             if show_glitch:
                 cur_glitch = img.copy()
             print('glitch is', ['off', 'on'][show_glitch])
-    #print(arrows[0])
     cv.destroyAllWindows()
