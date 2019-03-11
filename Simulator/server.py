@@ -1,27 +1,25 @@
 import socketserver
+import threading
+
+position = []
 
 class MyTCPHandler(socketserver.BaseRequestHandler):
-    """
-    The request handler class for our server.
-
-    It is instantiated once per connection to the server, and must
-    override the handle() method to implement communication to the
-    client.
-    """
-
     def handle(self):
-        # self.request is the TCP socket connected to the client
-        data = self.request.recv(1024).strip()
-        print("{} wrote:".format(self.client_address[0]))
-        print(data.decode('utf_8'))
-        
+        while True:
+            self.data = self.request.recv(1024)
+            if not self.data:
+                break
+            self.data = self.data.strip()
+            #Print incoming data points
+            print(self.data.decode('utf_8'))
+            self.request.send(self.data.upper())
+
+            #Fill position array with incoming data
+            position.append(self.data)
 
 if __name__ == "__main__":
-    HOST, PORT = "localhost", 9999
-
-    # Create the server, binding to localhost on port 9999
+    HOST, PORT = "localhost", 3288
     server = socketserver.TCPServer((HOST, PORT), MyTCPHandler)
-
-    # Activate the server; this will keep running until you
-    # interrupt the program with Ctrl-C
     server.serve_forever()
+
+
