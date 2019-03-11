@@ -19,9 +19,13 @@ from __future__ import print_function
 import numpy as np
 import cv2 as cv
 import video
+import math
+import toCSV
 
 
 def draw_flow(img, flow, step=16):
+    global arrows
+    
     h, w = img.shape[:2]
     y, x = np.mgrid[step/2:h:step, step/2:w:step].reshape(2,-1).astype(int)
     fx, fy = flow[y,x].T
@@ -30,6 +34,7 @@ def draw_flow(img, flow, step=16):
     vis = cv.cvtColor(img, cv.COLOR_GRAY2BGR)
     cv.polylines(vis, lines, 0, (0, 255, 0))
     for (x1, y1), (_x2, _y2) in lines:
+        arrows.append([x1,y1, _x2, _y2, math.sqrt((_x2-x1)*(_x2-x1) + (_y2-y1)*(_y2-y1)), math.degrees(math.atan2(_x2-x1, _y2-y1)) ])
         cv.circle(vis, (x1, y1), 1, (0, 255, 0), -1)
     return vis
 
@@ -63,6 +68,7 @@ if __name__ == '__main__':
     except IndexError:
         fn = 0
 
+    arrows = []
     cam = video.create_capture(fn)
     ret, prev = cam.read()
     prevgray = cv.cvtColor(prev, cv.COLOR_BGR2GRAY)
@@ -70,7 +76,15 @@ if __name__ == '__main__':
     show_glitch = False
     cur_glitch = prev.copy()
 
+    toCSV.coorTruncate()
+    frameCounter = 0
+    
+    #Will ensure the program keeps looping until you press escape.
     while True:
+        
+        frameCounter += 1
+        print('Frame ' + str(frameCounter))
+        
         ret, img = cam.read()
         gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
         flow = cv.calcOpticalFlowFarneback(prevgray, gray, None, 0.5, 3, 15, 3, 5, 1.2, 0)
@@ -82,8 +96,26 @@ if __name__ == '__main__':
         if show_glitch:
             cur_glitch = warp_flow(cur_glitch, flow)
             cv.imshow('glitch', cur_glitch)
-
-        ch = cv.waitKey(5)
+                
+        arrows.clear()
+        finalImg = draw_flow(gray,flow)
+        
+        vectorCounter = 0  
+        
+        #Prints Vector (arrow) information to console, but only ones that show change. Remove if length != 0 to print ALL vectors to console
+        for [x1, y1, _x2, _y2, length, angle ] in arrows : 
+            vectorCounter += 1
+            if length != 0:
+                print('Vector number ' + str(vectorCounter))
+                print('Start and End coordinates ' + '[' + str(x1) + ',' + str(y1) + '] ' + '[' + str(_x2) + ',' + str(_y2) + ']')
+                print('Angle of the dangle ' + str(angle))
+                print('Difference in pixels: ' + str(length))
+        toCSV.coorWrite(arrows[0])
+                
+                
+                
+        #Pressing Escape to get out of the program. Change the value for "waitKey" to give more or less milliseconds between frames.
+        ch = cv.waitKey(3000)
         if ch == 27:
             break
         if ch == ord('1'):
