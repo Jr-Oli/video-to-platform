@@ -76,8 +76,14 @@ int main( int argc, char** argv )	{
   Mat img_1, img_2;
   Mat R_f, t_f; //the final rotation and tranlation vectors containing the 
 
-  ofstream myfile;
-  myfile.open ("results1_1.txt");
+  ofstream csvfile;
+  csvfile.open ("translation_results.csv");
+  csvfile << "x,y,z,xθ,yθ,zθ"<<endl;
+
+  ofstream rfile;
+  rfile.open ("rotation_results.txt");
+  
+  
 
   double scale = 1.00;
   char filename1[200];
@@ -173,7 +179,8 @@ int main( int argc, char** argv )	{
     }
     
    // lines for printing results
-    myfile << t_f.at<double>(0) << ", " << t_f.at<double>(1) << ", " << t_f.at<double>(2) << endl;
+    csvfile << t_f.at<double>(0) << "," << t_f.at<double>(1) << "," << t_f.at<double>(2) << "," << R_f.at<double>(0) << "," << R_f.at<double>(1) << "," << R_f.at<double>(2) << endl;
+    //rfile << R_f.at<double>(0) << ", " << R_f.at<double>(1) << ", " << R_f.at<double>(2) << endl;
     
 
   // a redetection is triggered in case the number of feautres being trakced go below a particular threshold
@@ -194,6 +201,7 @@ int main( int argc, char** argv )	{
 
     rectangle( traj, Point(10, 30), Point(550, 50), CV_RGB(0,0,0), CV_FILLED);
     sprintf(text, "Coordinates: x = %02fm y = %02fm z = %02fm", t_f.at<double>(0), t_f.at<double>(1), t_f.at<double>(2));
+    //sprintf(text, "T Coordinates: xT = %02fm yT = %02fm zT = %02fm", R_f.at<double>(0), R_f.at<double>(1), R_f.at<double>(2));
     putText(traj, text, textOrg, fontFace, fontScale, Scalar::all(255), thickness, 8);
 
     imshow( "Road facing camera", currImage_c );
