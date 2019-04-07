@@ -6,7 +6,7 @@ import time
 HOST, PORT = "localhost", 3288
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 sock.connect((HOST, PORT))
-fileLocation = 'Sim_Test_Data.xlsx'
+fileLocation = 'translation_results.csv'
 #Pull data from excel shet
 FROM_SHEET = p.iget_records(file_name=fileLocation)
 
