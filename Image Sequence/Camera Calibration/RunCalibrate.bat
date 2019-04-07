@@ -1,0 +1,1 @@
+py calibrate.py "calibration_samples2\calib*.png"

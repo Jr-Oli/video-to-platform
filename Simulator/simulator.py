@@ -2,12 +2,11 @@ import socket
 import pyexcel as p
 import time
 
-
 #Host/Port
 HOST, PORT = "localhost", 3288
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 sock.connect((HOST, PORT))
-fileLocation = 'Sim_Test_Data.xlsx'
+fileLocation = 'translation_results.csv'
 #Pull data from excel shet
 FROM_SHEET = p.iget_records(file_name=fileLocation)
 
@@ -73,8 +72,8 @@ time.sleep(3)
 print("Sending platform position @ 30fps:")
 
 for i in range(len(CHOSENDATA)):
-    print(CHOSENDATA[i])
+    #print(CHOSENDATA[i])
     sock.sendall(bytes(str(CHOSENDATA[i]), "utf_8"))
     time.sleep(.3)
- 
+
 p.free_resources()
