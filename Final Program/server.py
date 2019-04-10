@@ -1,11 +1,13 @@
 import socketserver
 import threading
+import videoPlayer
 
 position = []
 
 class MyTCPHandler(socketserver.BaseRequestHandler):
     def handle(self):
         print("|   X   |   Y   |   Z   |   X0   |   Y0   |   Z   |")
+        videoPlayer.playVideo()
         while True:
             self.data = self.request.recv(1024)
             if not self.data:
